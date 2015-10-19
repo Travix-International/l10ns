@@ -64,7 +64,7 @@ Merger.prototype.mergeId = function(newLocalizations, defaultIds, key) {
     newLocalizations[key].id = defaultIds[key];
   }
   else {
-    newLocalizations[key].new = false;
+    newLocalizations[key].new = true;
     newLocalizations[key].id = hashids.encrypt(now, this.counter);
   }
   this.counter++;
@@ -83,16 +83,15 @@ Merger.prototype.mergeId = function(newLocalizations, defaultIds, key) {
  */
 
 Merger.prototype.mergeLocalizations = function(newLocalizations, oldLocalizations, key) {
-  if((key in oldLocalizations) && ('value' in oldLocalizations[key])) {
-    if (newLocalizations[key].value) {
-      oldLocalizations[key].value = newLocalizations[key].value;
-      oldLocalizations[key].text = newLocalizations[key].text;
-    }
-  } else {
+  if(key in oldLocalizations && 'value' in oldLocalizations[key]) {
+    newLocalizations[key].value = oldLocalizations[key].value;
+    newLocalizations[key].text = oldLocalizations[key].text;
+  }
+  else {
     throw new TypeError('Key does not exits in oldLocalizations.');
   }
 
-  return oldLocalizations;
+  return newLocalizations;
 };
 
 /**

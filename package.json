@@ -1,12 +1,16 @@
 {
   "name": "l10ns",
   "description": "Internationalization workflow and formatting",
-  "version": "2.2.10",
-  "homepage": "https://github.com/tinganho/l10ns",
+  "version": "2.3.0",
+  "homepage": "https://github.com/mAiNiNfEcTiOn/l10ns",
   "author": {
     "name": "Tingan Ho",
     "email": "tingan87@gmail.com"
   },
+  "contributors": [{
+    "name": "Ricardo Machado",
+    "email": "rmachado@travix.com"
+  }],
   "repository": {
     "type": "git",
     "url": "git://github.com/tinganho/l10ns.git"

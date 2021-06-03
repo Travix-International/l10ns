@@ -77,7 +77,7 @@
     "grunt-rev": "^0.1.0",
     "grunt-webp": "https://github.com/tinganho/grunt-webp/tarball/master",
     "jshint-globals": "~0.1.0",
-    "l10ns-template": "^1.0.0",
+    "grunt-dot-compiler": "git://github.com/Travix-International/grunt-dot-compiler.git#0.5.121",
     "mocha": "^8.2.0",
     "moment": "^2.8.3",
     "moment-timezone": "^0.2.4",
